@@ -3,6 +3,14 @@
 :root {
   padding: 0;
   margin: 0;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 body {
@@ -76,29 +84,37 @@ a {
         border-radius: 0px 6px 6px 0px;
         background: $primary;
 
-        i {
-          background: black;
-          border-radius: 50%;
-          font-size: 1.5rem;
-          padding: 0.3em;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transition: 0.5s;
-
+        a {
           &:hover {
-            animation: rotate 1s linear;
+            text-decoration: none;
           }
-          @keyframes rotate {
-            0% {
-              transform: rotate(0deg);
-            }
-            50% {
-              transform: rotate(180deg);
-            }
-            100% {
-              transform: rotate(360deg);
+          i {
+            background: black;
+            border-radius: 50%;
+            font-size: 1em;
+            padding: 0.5em;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+
+            // &:hover {
+            //   animation: slideOut 3s linear;
+            // }
+            // @keyframes slideOut {
+            //   70% {
+            //     transform: translateY(-5%);
+            //   }
+            //   50% {
+            //     transform: rotate(180deg);
+            //   }
+            //   100% {
+            //     transform: rotate(360deg);
+            //   }
+            // }
+            &:hover {
+              text-decoration: none;
             }
           }
         }
