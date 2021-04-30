@@ -67,23 +67,62 @@ export default function Home() {
           </div>
 
           <div className="course-section">
-            <h4 className="text-danger text-center p-4">
-              __ Available Courses __
-            </h4>
-
-            <div className="courses container">
-              <div className="left">
-                <img src="/images/course1.png" className="img-fluid" alt="" />
-                <h5 className="text-secondary mt-3 mb-0">
-                  Teacher finishing school
-                </h5>
-                <small className="mb-2 mt-2">(Video course )</small>
-                <strong className="text-danger d-block">&#8358;10,000</strong>
-                <button className="btn-primary border rounded text-light py-1 px-4">
-                  Enroll
-                </button>
+            <div className="container">
+              <div className="course-section-title">
+                <h4 className="text-danger">
+                  Expand your career opportunities with Python
+                </h4>
+                <p>
+                  Whether you work in machine learning or finance, or are
+                  pursuing a career in web development or data science, Python
+                  is one of the most important skills you can learn. Python's
+                  simple syntax is especially suited for desktop, web, and
+                  business
+                </p>
+                <button className="btn-outline-secondary btn">Explore</button>
               </div>
-              <div className="right"></div>
+
+              <div className="courses">
+                <div className="course">
+                  <div className="course">
+                    <img
+                      src="/images/course1.png"
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <h5 className="text-secondary mt-3 mb-0">
+                      Teacher finishing school
+                    </h5>
+                    <small className="d-block">Mrs Ken Nkwonta</small>
+                    <small className="mb-2 mt-2">Rating</small>
+                    <strong className="text-danger d-block">
+                      &#8358;10,000
+                    </strong>
+                    {/* <button className="btn-primary border rounded text-light py-1 px-4">
+                      Enroll Now
+                    </button> */}
+                  </div>
+                </div>
+
+                <div className="course">
+                  <div className="course">
+                    <img
+                      src="/images/course2.png"
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <h5 className="text-secondary mt-3 mb-0">Social Polish</h5>
+                    <strong className="d-block">Mrs Ken Nkwonta</strong>
+                    <small className="mb-2 mt-2">Rating</small>
+                    <strong className="text-danger d-block">
+                      &#8358;25,000
+                    </strong>
+                    {/* <button className="btn-primary border rounded text-light py-1 px-4">
+                      Enroll Now
+                    </button> */}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </main>
