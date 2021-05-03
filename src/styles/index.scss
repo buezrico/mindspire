@@ -3,6 +3,10 @@
 @import "./globals.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@import "~antd/dist/antd.css";
 
 li {
   list-style: none;
@@ -10,4 +14,30 @@ li {
 
 a {
   text-decoration: none;
+}
+
+.popover {
+  // background: red;
+  padding: 1rem;
+  width: 500px;
+
+  ul {
+    padding: 0 1rem;
+    li {
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+
+      i {
+        // font-size: 0.7rem;
+        margin-right: 2rem;
+        padding: 0;
+        align-self: center;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
 }

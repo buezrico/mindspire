@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React, { Fragment } from "react";
-import Navbar from "../components/Navbar";
+import CoursesComp from "../components/CoursesComp";
+import Navbar from "../components/NavbarComp";
 
 export default function Home() {
   return (
@@ -67,62 +68,41 @@ export default function Home() {
           </div>
 
           <div className="course-section">
-            <div className="container">
+            <div className="course-section-title container">
               <div className="course-section-title">
-                <h4 className="text-danger">
-                  Expand your career opportunities with Python
-                </h4>
+                <h3 className="text-danger">
+                  The world's largest selection of courses
+                </h3>
                 <p>
-                  Whether you work in machine learning or finance, or are
-                  pursuing a career in web development or data science, Python
-                  is one of the most important skills you can learn. Python's
-                  simple syntax is especially suited for desktop, web, and
-                  business
+                  Choose from 130,000 online video courses with new additions
+                  published every month
                 </p>
-                <button className="btn-outline-secondary btn">Explore</button>
               </div>
-
-              <div className="courses">
-                <div className="course">
-                  <div className="course">
-                    <img
-                      src="/images/course1.png"
-                      className="img-fluid"
-                      alt=""
-                    />
-                    <h5 className="text-secondary mt-3 mb-0">
-                      Teacher finishing school
-                    </h5>
-                    <small className="d-block">Mrs Ken Nkwonta</small>
-                    <small className="mb-2 mt-2">Rating</small>
-                    <strong className="text-danger d-block">
-                      &#8358;10,000
-                    </strong>
-                    {/* <button className="btn-primary border rounded text-light py-1 px-4">
-                      Enroll Now
-                    </button> */}
-                  </div>
+            </div>
+            <div className="container course-section-content">
+              <div className="course-section-content-title ">
+                <div className="course-section-content-title-text">
+                  <h4 className="">
+                    Expand your career opportunities with Social Polish
+                  </h4>
+                  <p>
+                    Whether you work in machine learning or finance, or are
+                    pursuing a career in web development or data science, Python
+                    is one of the most important skills you can learn. Python's
+                    simple syntax is especially suited for desktop, web, and
+                    business
+                  </p>
+                  <button className="btn-outline-secondary btn mb-5">
+                    Explore
+                  </button>
                 </div>
 
-                <div className="course">
-                  <div className="course">
-                    <img
-                      src="/images/course2.png"
-                      className="img-fluid"
-                      alt=""
-                    />
-                    <h5 className="text-secondary mt-3 mb-0">Social Polish</h5>
-                    <strong className="d-block">Mrs Ken Nkwonta</strong>
-                    <small className="mb-2 mt-2">Rating</small>
-                    <strong className="text-danger d-block">
-                      &#8358;25,000
-                    </strong>
-                    {/* <button className="btn-primary border rounded text-light py-1 px-4">
-                      Enroll Now
-                    </button> */}
-                  </div>
+                <div className="course-section-content-title-picture">
+                  <img src="/images/profilePicture.png" alt="profile_picture" />
                 </div>
               </div>
+
+              <CoursesComp />
             </div>
           </div>
         </main>
