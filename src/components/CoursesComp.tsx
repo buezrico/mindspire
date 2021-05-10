@@ -20,7 +20,7 @@ class CoursesComp extends Component {
       // centerMode: true,
       infinite: true,
       // centerPadding: "5rem",
-      slidesToShow: 5,
+      slidesToShow: 4,
       speed: 500,
       arrows: true,
       // dots: true,
@@ -144,23 +144,6 @@ class CoursesComp extends Component {
                 <img src="/images/course1.png" className="img-fluid" alt="" />
                 <strong className="text-secondary mt-3 mb-0">
                   Teacher finishing school
-                </strong>
-                <small className="d-block">Mrs Ken Nkwonta</small>
-                <small className="mb-2 mt-2">Rating</small>
-                <small>
-                  <strong className="text-danger d-block">&#8358;10,000</strong>
-                </small>
-                {/* <button className="btn-primary border rounded text-light py-1 px-4">
-                      Enroll Now
-                    </button> */}
-              </div>
-            </Popover>
-
-            <Popover content={content} title="Title" placement="top">
-              <div className="course">
-                <img src="/images/course2.png" className="img-fluid" alt="" />
-                <strong className="text-secondary mt-3 mb-0">
-                  Social Polish
                 </strong>
                 <small className="d-block">Mrs Ken Nkwonta</small>
                 <small className="mb-2 mt-2">Rating</small>
