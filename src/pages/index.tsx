@@ -103,20 +103,25 @@ export default function Home() {
         <div className="container">
           <div className="about-section">
             <div className="about-section-left">
-              <img src="/images/about1.png" alt="" />
-              <div className="d-flex bottom">
-                <img src="/images/about.png" alt="" />
-                <img src="/images/aboutlogo.png" alt="" />
+              <div className="top">
+                <img src="/images/about1.png" className="img1" alt="" />
+              </div>
+              <div className="bottom">
+                <img src="/images/about.png" className="img2" alt="" />
+                <img src="/images/aboutlogo.png" className="img3" alt="" />
               </div>
             </div>
             <div className="about-section-right">
               <h3 className="text-light text-primary mb-5">About Mindspire</h3>
+              <h3 className="text-primary">
+                Best Virtual eLearning Network “Mindspire”
+              </h3>
               <p>
-                Recogizing the need is the primary than we expected Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Sint ipsa
-                voluptatibus,
+                Lorem ipsum dolor sit amet, consectetur adipisic ing elit, sed
+                eius to mod tempors incididunt ut labore et dolore magna this
+                aliqua enims ad minim.
               </p>
-              <h5 className="text-light">CEO Mindspire / Instructor</h5>
+              <button className="btn btn-outline-primary ">Read More</button>
             </div>
           </div>
         </div>
@@ -133,7 +138,7 @@ export default function Home() {
                 dolor sit amet, consectetur adipisicing elit. Sint ipsa
                 voluptatibus,
               </p>
-              <h5 className="text-light">CEO Mindspire / Instructor</h5>
+              <h6 className="text-primary">CEO Mindspire / Instructor</h6>
               <div className="trainer-icons mt-3">
                 <SocialIconsComp />
               </div>
@@ -155,27 +160,14 @@ export default function Home() {
                   <i className="fas fa-map-marker-alt mr-3"></i>
                   <p>No 6. Mission Road, Elimgbu Port Harcourt, Nigeria</p>
                 </div>
-                <div className="phone contact-box mb-3">
+                <div className="phone contact-box mb-5">
                   <i className="fas fa-phone-alt mr-3"></i>
                   <div className="numbers">
                     <p className="m-0">+234 8109169579</p>
                     <p className="m-0">+234 8109169579</p>
                   </div>
                 </div>
-                {/* <div className="d-flex text-secondary c-hand">
-                  <a href="#">
-                    <i className="fab fa-instagram c-hand"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-twitter c-hand"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-facebook c-hand"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-linkedin c-hand"></i>
-                  </a>
-                </div> */}
+
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.5916228635783!2d6.962575314293801!3d4.83996534178304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069ce3535ac50b9%3A0xd3565a36f7f3f80d!2sSitrid%20International%20School!5e0!3m2!1sen!2sng!4v1620678118946!5m2!1sen!2sng"
                   width="300"
@@ -187,31 +179,31 @@ export default function Home() {
                 ></iframe>
               </div>
               <div className="contact-section-content-right">
-                <h5>Leave a message</h5>
+                <h5 className="mb-4">Leave a message</h5>
                 <form>
                   <div className="form row">
-                    <div className="form-group col-12 mb-3">
+                    <div className="form-group col-12 mb-4">
                       <input
                         type="text"
                         className="form-control"
                         placeholder="Name"
                       />
                     </div>
-                    <div className="form-group col-12 mb-3">
+                    <div className="form-group col-12 mb-4">
                       <input
                         type="text"
                         className="form-control"
                         placeholder="Phone"
                       />
                     </div>
-                    <div className="form-group col-12 mb-3">
+                    <div className="form-group col-12 mb-4">
                       <input
                         type="text"
                         className="form-control"
                         placeholder="Email"
                       />
                     </div>
-                    <div className="form-group col-12 mb-3">
+                    <div className="form-group col-12 mb-5">
                       <textarea
                         rows="5"
                         className="form-control"
@@ -237,17 +229,19 @@ export default function Home() {
             <div className="footer-section-pic d-flex">
               <img src="/images/aboutlogo.png" alt="" />
             </div>
-            <div className="about-section-text">
+            <div className="footer-section-text">
               <h5 className="text-primary">About Mindspire</h5>
-              {/* <h3 className="text-primary">
-                Best Virtual eLearning Network “Mindspire”
-              </h3> */}
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisic ing elit, sed
                 eius to mod tempors incididunt ut labore et dolore magna this
                 aliqua enims ad minim.
               </p>
-              {/* <button className="btn btn-primary">Read More</button> */}
+              <div className="rights">
+                <small>&copy; 2021 All Rights Reserved </small>
+                <div className="footer-icons">
+                  <SocialIconsComp />
+                </div>
+              </div>
             </div>
           </div>
         </div>
