@@ -17,7 +17,7 @@ export default function Home() {
         <div className="banner-section">
           <div className="main-banner">
             <div className="banner-text">
-              <h4 className="text-light">
+              <h4 className="text-light banner-title">
                 Engage your teachers <br /> with the right skills
               </h4>
               <p className="text-primary">Start Learning Today</p>
@@ -26,24 +26,23 @@ export default function Home() {
               <SocialIconsComp />
             </div>
           </div>
-
-          <div className="container">
+          <div className="inner">
             <div className="row banner-boxes">
-              <div className="box col-sm">
+              <div className="box col-sm mb-3">
                 <i className="fas fa-tv  fa-2x mr-3"></i>
                 <div className="box-text">
                   <p>100 video courses</p>
                   <small>Enjoy a variety of engaging topics</small>
                 </div>
               </div>
-              <div className="box col-sm">
+              <div className="box col-sm mb-3">
                 <i className="fas fa-chalkboard-teacher fa-2x mr-3"></i>
                 <div className="box-text">
                   <p>Expert Instructor</p>
                   <small>Get the right Instructor</small>
                 </div>
               </div>
-              <div className="box col-sm">
+              <div className="box col-sm mb-3">
                 <i className="fas fa-calendar-check fa-2x mr-3"></i>
                 <div className="box-text">
                   <p>Lifetime access</p>
@@ -51,9 +50,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <a className="d-block text-center text-primary">
-              <i className="fas fa-chevron-down fa-2x arrow-down"></i>
-            </a>
+            <div className="d-block text-center arrow-down">
+              <i className="fas fa-chevron-down fa-2x text-primary"></i>
+            </div>
           </div>
         </div>
       </header>
@@ -72,7 +71,7 @@ export default function Home() {
             </div>
           </div>
           <div className="container course-section-content">
-            <div className="course-section-content-title ">
+            <div className="course-section-content-title d-none d-md-flex">
               <div className="course-section-content-title-text">
                 <h4 className="">
                   Expand your career opportunities with Social Polish
@@ -112,10 +111,10 @@ export default function Home() {
               </div>
             </div>
             <div className="about-section-right">
-              <h3 className="text-light text-primary mb-5">About Mindspire</h3>
-              <h3 className="text-primary">
+              <h3 className="text-light text-primary mb-3">About Mindspire</h3>
+              <h5 className="text-primary">
                 Best Virtual eLearning Network “Mindspire”
-              </h3>
+              </h5>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisic ing elit, sed
                 eius to mod tempors incididunt ut labore et dolore magna this
@@ -130,16 +129,19 @@ export default function Home() {
       <section className="trainer">
         <div className="container">
           <div className="trainer-section">
+            <h2 className="text-light mb-3 d-md-none">Meet your trainer</h2>
             <div className="trainer-section-left">
-              <h2 className="text-light mb-5">Meet your trainer</h2>
+              <h2 className="text-light mb-2 d-none d-md-block">
+                Meet your trainer
+              </h2>
               <h5 className="text-primary">Mrs Nkechi Nkwonta</h5>
               <p>
                 Recogizing the need is the primary than we expected Lorem ipsum
                 dolor sit amet, consectetur adipisicing elit. Sint ipsa
                 voluptatibus,
               </p>
-              <h6 className="text-primary">CEO Mindspire / Instructor</h6>
-              <div className="trainer-icons mt-3">
+              <h6 className="text-primary mb-2">CEO Mindspire / Instructor</h6>
+              <div className="trainer-icons">
                 <SocialIconsComp />
               </div>
             </div>
@@ -160,7 +162,7 @@ export default function Home() {
                   <i className="fas fa-map-marker-alt mr-3"></i>
                   <p>No 6. Mission Road, Elimgbu Port Harcourt, Nigeria</p>
                 </div>
-                <div className="phone contact-box mb-5">
+                <div className="phone contact-box mb-3">
                   <i className="fas fa-phone-alt mr-3"></i>
                   <div className="numbers">
                     <p className="m-0">+234 8109169579</p>
@@ -170,40 +172,40 @@ export default function Home() {
 
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.5916228635783!2d6.962575314293801!3d4.83996534178304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069ce3535ac50b9%3A0xd3565a36f7f3f80d!2sSitrid%20International%20School!5e0!3m2!1sen!2sng!4v1620678118946!5m2!1sen!2sng"
-                  width="300"
+                  width="250"
                   height="250"
                   className="rounded"
-                  // style="border:0;"
+                  style={{ border: 0 }}
                   // allowfullscreen=true
                   loading="lazy"
                 ></iframe>
               </div>
               <div className="contact-section-content-right">
-                <h5 className="mb-4">Leave a message</h5>
+                <h5 className="mb-3">Leave a message</h5>
                 <form>
                   <div className="form row">
-                    <div className="form-group col-12 mb-4">
+                    <div className="form-group col-12 mb-3">
                       <input
                         type="text"
                         className="form-control"
                         placeholder="Name"
                       />
                     </div>
-                    <div className="form-group col-12 mb-4">
+                    <div className="form-group col-12 mb-3">
                       <input
                         type="text"
                         className="form-control"
                         placeholder="Phone"
                       />
                     </div>
-                    <div className="form-group col-12 mb-4">
+                    <div className="form-group col-12 mb-3">
                       <input
                         type="text"
                         className="form-control"
                         placeholder="Email"
                       />
                     </div>
-                    <div className="form-group col-12 mb-5">
+                    <div className="form-group col-12 mb-3">
                       <textarea
                         rows="5"
                         className="form-control"
@@ -226,11 +228,11 @@ export default function Home() {
       <footer className="footer">
         <div className="container">
           <div className="footer-section">
-            <div className="footer-section-pic d-flex">
+            <div className="footer-section-pic d-none d-md-flex">
               <img src="/images/aboutlogo.png" alt="" />
             </div>
             <div className="footer-section-text">
-              <h5 className="text-primary">About Mindspire</h5>
+              {/* <h5 className="text-primary">About Mindspire</h5> */}
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisic ing elit, sed
                 eius to mod tempors incididunt ut labore et dolore magna this

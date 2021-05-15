@@ -22,10 +22,36 @@ class CoursesComp extends Component {
       // centerPadding: "5rem",
       slidesToShow: 4,
       speed: 500,
-      arrows: true,
+      // arrows: true,
       // dots: true,
       // nextArrow: <SampleNextArrow />,
       // prevArrow: <SamplePrevArrow />,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            // slidesToScroll: 1,
+            infinite: true,
+            // dots: true,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            // slidesToScroll: 1,
+            initialSlide: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            // slidesToScroll: 1,
+          },
+        },
+      ],
     };
 
     const content = (
@@ -45,23 +71,6 @@ class CoursesComp extends Component {
           Learn Python like a Professional Start from the basics and go all the
           way to creating your own applications and games
         </p>
-
-        <ul className="d-block">
-          <li>
-            <i className="fas fa-check"></i>
-            <p>Master Machine Learning on Python & R</p>
-          </li>
-
-          <li>
-            <i className="fas fa-check"></i>
-            <p>Use Spark for Big Data Analysis</p>
-          </li>
-
-          <li>
-            <i className="fas fa-check"></i>
-            <p>Make accurate predictions</p>
-          </li>
-        </ul>
 
         <button className="btn-primary btn rounded w-100">Enroll Now</button>
       </div>
@@ -161,13 +170,13 @@ class CoursesComp extends Component {
             className="btn rounded-circle prev arrows"
             onClick={this.previous}
           >
-            <i className="fas fa-chevron-left rounded-circle p-2"></i>
+            <i className="fas fa-chevron-left p-1"></i>
           </button>
           <button
             className="btn rounded-circle next arrows"
             onClick={this.next}
           >
-            <i className="fas fa-chevron-right p-2"></i>
+            <i className="fas fa-chevron-right"></i>
           </button>
         </div>
       </div>

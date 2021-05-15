@@ -2,7 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-:root {
+:root,
+*,
+html,
+body {
   padding: 0;
   margin: 0;
 
@@ -35,29 +38,86 @@ a {
 header {
   background-image: url("../../public/images/bg.png");
   background-size: cover;
-  .nav {
+  max-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    background: none;
+  }
+
+  nav {
+    // position: relative;
     background: $secondary;
-    a {
-      font-weight: bold;
-      color: $light;
+    i {
+      cursor: pointer;
+      border: 2px solid $light;
+      padding: 0.2em;
+      border-radius: 0.3rem;
+    }
+    color: $light;
+    font-weight: bold;
+    @media screen and (max-width: 768px) {
+      .mobile-nav {
+        position: fixed;
+        display: block;
+        height: 100vh;
+        width: 70%;
+        left: -100%;
+        top: 0;
+        background: $light;
+        z-index: 5;
+        border-radius: 0 2rem 2rem 0;
+        transition: 0.5s ease-in-out;
+        padding: 3rem 2rem;
+        .fa-times {
+          border: 2px solid $secondary;
+          padding: 0.2em;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          height: 60%;
+          width: 100%;
+          justify-content: center;
+          color: $secondary;
+        }
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+        }
+      }
     }
   }
-  min-height: 100vh;
   .main-banner {
-    height: 75vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    @media screen and (max-width: 768px) {
+      text-align: unset;
+      height: 55vh;
+      background: url("../../public/images/mobileBG.png");
+    }
 
     .banner-text {
       h4 {
         font-weight: 600;
         font-size: 3em;
+        @media screen and (max-width: 768px) {
+          font-size: 1.3rem;
+        }
       }
       p {
         font-weight: 600;
         font-size: 1.5em;
+        @media screen and (max-width: 768px) {
+          font-size: 0.8rem;
+        }
       }
     }
 
@@ -68,16 +128,14 @@ header {
       justify-content: space-around;
       align-items: center;
       left: 0;
-      height: 30%;
-      min-width: 5%;
-      max-width: 10%;
+      // min-width: 5%;
+      // max-width: 10%;
       border-radius: 0px 6px 6px 0px;
       background: $primary;
+      grid-gap: 0.5rem;
+      padding: 1rem;
 
       a {
-        &:hover {
-          text-decoration: none;
-        }
         i {
           background: black;
           border-radius: 50%;
@@ -94,50 +152,113 @@ header {
           }
         }
       }
-    }
-  }
-  .banner-boxes {
-    grid-gap: 1rem;
-    color: $light;
-    // flex: 1;
-    height: 30%;
-    .box {
-      max-height: 100%;
-      box-shadow: 0px 4px 15px rgba(30, 60, 94, 0.7);
-      border-radius: 10px;
-      margin-top: -1.5rem;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: $secondary;
-      transition: 0.5s;
-
-      &:hover {
-        margin-top: -3rem;
-      }
-
-      .box-text {
-        display: flex;
-        flex-direction: column;
-
-        p {
-          font-weight: bold;
+      @media screen and (max-width: 768px) {
+        border-radius: 6px 0px 0px 6px;
+        padding: 0.5rem;
+        right: 0;
+        left: unset;
+        a {
+          i {
+            font-size: 0.6rem;
+          }
         }
       }
     }
-    .arrow-down:hover {
-      animation: slideOut 3s linear;
+  }
+  .inner {
+    padding: 1rem 2rem;
+    background: $secondary;
+    flex: 1;
+    height: 100%;
+
+    .banner-boxes {
+      background: $light;
+      box-shadow: 0px 5px 16px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      grid-gap: 1rem;
+      color: $light;
+      padding: 1rem 2rem;
+      margin-top: -3rem;
+      .box {
+        height: 5rem;
+        box-shadow: 0px 4px 15px rgba(30, 60, 94, 0.7);
+        border-radius: 10px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $secondary;
+        transition: 0.5s;
+
+        @media screen and (min-width: 768px) {
+          &:hover {
+            margin-top: -0.5rem;
+            // height: 6rem;
+          }
+        }
+
+        .box-text {
+          display: flex;
+          flex-direction: column;
+          p {
+            margin: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+          }
+          small {
+            font-size: 0.5rem;
+          }
+        }
+      }
+    }
+    .arrow-down {
+      // height: 100%;
+      // background: red;
+      // color: green;
+      cursor: pointer;
+      .fa-chevron-down {
+        animation: slideOut 2s linear;
+        animation-iteration-count: infinite;
+      }
     }
     @keyframes slideOut {
-      70% {
-        transform: translateY(10%);
+      0% {
+        transform: translateY(0%);
       }
       50% {
-        transform: rotate(180deg);
+        transform: translateY(50%);
       }
       100% {
-        transform: rotate(360deg);
+        transform: translateY(0%);
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .banner-boxes {
+        min-height: 40vh;
+        align-content: center;
+        grid-gap: 0;
+        padding: 1rem 0;
+        margin-top: -5rem;
+        position: relative;
+
+        .box {
+          height: unset;
+          margin: 0 3rem;
+          align-self: center;
+          padding: 0.5rem;
+          &:hover {
+            margin: 0 2rem;
+          }
+        }
+        .fas {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+        small {
+          font-size: 0.5rem;
+        }
       }
     }
   }
@@ -145,17 +266,34 @@ header {
 
 .course-section {
   height: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
   background: $light;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-title {
+    @media screen and (max-width: 768px) {
+      h3 {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
 
   &-content {
     position: relative;
     border: 2px solid $secondary;
-    padding: 2rem 3rem;
     border-radius: 15px;
     // min-height: 90%;
     // height: 100%;
+    padding: 2rem 1rem;
+    @media screen and (min-width: 768px) {
+      padding: 2rem 2rem;
+    }
 
     &-title {
       width: 100%;
@@ -185,6 +323,9 @@ header {
         color: $secondary;
         border: none;
         box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+        @media screen and (max-width: 768px) {
+          top: 30%;
+        }
       }
 
       .prev {
@@ -237,6 +378,21 @@ header {
   color: $light;
   padding: 5rem 0;
 
+  @media screen and (max-width: 768px) {
+    padding: 2rem 1rem;
+    .about-section {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .about-section-right {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .about-section-left {
+        width: 100%;
+      }
+    }
+  }
   &-section {
     height: inherit;
     display: flex;
@@ -283,6 +439,31 @@ header {
   margin-bottom: 3rem;
   color: $light;
   padding: 5rem 0;
+  @media screen and (max-width: 768px) {
+    padding: 2rem 0;
+    .trainer-section {
+      display: flex;
+      flex-direction: column;
+    }
+    .trainer-section-left {
+      order: 1;
+      width: 100%;
+      text-align: center;
+    }
+    .trainer-section-right {
+      width: 100%;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 15rem;
+      }
+    }
+    .trainer-icons {
+      align-self: center;
+      padding: 0;
+    }
+  }
 
   &-section {
     height: inherit;
@@ -294,7 +475,7 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      text-align: justify;
+      // text-align: justify;
 
       .trainer-icons {
         width: 60%;
@@ -303,7 +484,7 @@ header {
         align-items: center;
         border-radius: 10px;
         background: $primary;
-        padding: 1rem;
+        padding: 0.2rem;
 
         a {
           &:hover {
@@ -312,7 +493,7 @@ header {
           i {
             background: black;
             border-radius: 50%;
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 0.5em;
             width: 100%;
             display: flex;
@@ -339,7 +520,32 @@ header {
 }
 
 .contact {
-  height: 100vh;
+  // height: 100%;
+  padding-bottom: 2rem;
+  @media screen and (max-width: 768px) {
+    .contact-section-content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .contact-section-content-left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+      iframe {
+        align-self: center;
+        height: 10rem;
+        width: 12rem;
+      }
+    }
+    .contact-section-content-right {
+      width: 100%;
+      padding: 1rem 0;
+      h5 {
+        text-align: center;
+      }
+    }
+  }
 
   &-section {
     padding: 1rem 2rem;
@@ -379,6 +585,19 @@ header {
   height: 100%;
   background: #020305;
   color: $primary;
+
+  @media screen and (max-width: 768px) {
+    .footer-section-pic {
+      img {
+        width: 100%;
+        max-width: 10rem;
+      }
+    }
+    .footer-section-text {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
 
   &-section {
     height: inherit;
