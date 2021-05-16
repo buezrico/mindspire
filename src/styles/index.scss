@@ -5,6 +5,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 @import "~antd/dist/antd.css";
+@import "react-whatsapp-widget/dist/index.css";
 
 li {
   list-style: none;
@@ -23,4 +24,20 @@ a {
 .slick-next::before {
   color: $secondary;
   font-size: 2rem;
+}
+
+._1bpcM {
+  position: fixed;
+  width: unset;
+  height: unset;
+  padding: 0.5rem;
+}
+._2iWL7 {
+  margin: 1rem;
+  margin-bottom: 0;
+  position: fixed;
+  @media screen and (max-width: 768px) {
+    width: unset;
+  }
+  // right: unset;
 }

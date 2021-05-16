@@ -4,6 +4,8 @@ import CoursesComp from "../components/CoursesComp";
 import Navbar from "../components/NavbarComp";
 import SocialIconsComp from "../components/SocialIconsComp";
 
+import WhatsappWidget from "react-whatsapp-widget";
+
 export default function Home() {
   return (
     <Fragment>
@@ -250,6 +252,12 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <WhatsappWidget
+        phoneNumber="+2348109169579"
+        message="welcome to MindSpire"
+        companyName="Mrs Ken"
+        textReplyTime="Typically replies in an hour"
+      />
     </Fragment>
   );
 }
