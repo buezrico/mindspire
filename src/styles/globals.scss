@@ -39,6 +39,12 @@ header {
   background-image: url("../../public/images/bg.png");
   background-size: cover;
   max-height: 100vh;
+  position: relative;
+  .navbar {
+    position: fixed;
+    z-index: 30;
+    width: 100%;
+  }
   // display: flex;
   // flex-direction: column;
   // justify-content: space-between;
@@ -58,6 +64,7 @@ header {
     color: $light;
     font-weight: bold;
     @media screen and (max-width: 768px) {
+      position: fixed;
       .mobile-nav {
         position: fixed;
         display: block;
@@ -100,7 +107,7 @@ header {
     text-align: center;
     @media screen and (max-width: 768px) {
       text-align: unset;
-      height: 55vh;
+      height: 60vh;
       background: url("../../public/images/mobileBG.png");
     }
 
@@ -166,10 +173,10 @@ header {
     }
   }
   .inner {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     background: $secondary;
     flex: 1;
-    height: 100%;
+    height: 30vh;
 
     .banner-boxes {
       display: grid;
@@ -179,8 +186,9 @@ header {
       border-radius: 12px;
       grid-gap: 1rem;
       color: $light;
-      padding: 1rem 2rem;
+      padding: 2rem 2rem;
       margin-top: -3rem;
+      // height: 90%;
       .box {
         height: 5rem;
         box-shadow: 0px 4px 15px rgba(30, 60, 94, 0.7);
@@ -235,12 +243,13 @@ header {
       }
     }
     @media screen and (max-width: 768px) {
+      height: 40vh;
       .banner-boxes {
         grid-template-columns: repeat(1, 1fr);
         // min-height: 40vh;
         align-content: center;
         grid-gap: 0;
-        padding: 1rem 0;
+        padding: 2rem 0;
         margin-top: -5rem;
         position: relative;
 

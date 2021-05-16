@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Anchor } from "antd";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const { Link } = Anchor;
   return (
     <nav className="navbar">
       {/* <div className="container d-flex justify-content-between"> */}
@@ -40,24 +42,40 @@ const Navbar = () => {
 
         <ul className="nav">
           <li className="nav-item">
-            <a href="#" className="nav-link">
-              Home
-            </a>
+            <Anchor
+              onClick={() => setNav(!nav)}
+              affix={false}
+              showInkInFixed={false}
+            >
+              <Link href="#home" title="Home" />
+            </Anchor>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
-              Courses
-            </a>
+            <Anchor
+              onClick={() => setNav(!nav)}
+              affix={false}
+              showInkInFixed={false}
+            >
+              <Link href="#courses" title="Courses" />
+            </Anchor>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
-              About Us
-            </a>
+            <Anchor
+              onClick={() => setNav(!nav)}
+              affix={false}
+              showInkInFixed={false}
+            >
+              <Link href="#about" title="About Us" />
+            </Anchor>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
-              Contact Us
-            </a>
+            <Anchor
+              onClick={() => setNav(!nav)}
+              affix={false}
+              showInkInFixed={false}
+            >
+              <Link href="#contact-us" title="Contact Us" />
+            </Anchor>
           </li>
         </ul>
       </div>

@@ -41,3 +41,16 @@ a {
   }
   // right: unset;
 }
+
+.ant-anchor-ink {
+  display: none;
+}
+.ant-anchor-link-title {
+  color: $light;
+  @media screen and (max-width: 768px) {
+    color: $secondary;
+  }
+}
+.ant-anchor-link-title-active {
+  color: $primary !important;
+}

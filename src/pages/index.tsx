@@ -4,9 +4,11 @@ import CoursesComp from "../components/CoursesComp";
 import Navbar from "../components/NavbarComp";
 import SocialIconsComp from "../components/SocialIconsComp";
 
+import { Anchor } from "antd";
 import WhatsappWidget from "react-whatsapp-widget";
 
 export default function Home() {
+  const { Link } = Anchor;
   return (
     <Fragment>
       <Head>
@@ -16,7 +18,7 @@ export default function Home() {
       <header>
         <Navbar />
 
-        <div className="banner-section">
+        <div className="banner-section" id="home">
           <div className="main-banner">
             <div className="banner-text">
               <h4 className="text-light banner-title">
@@ -52,15 +54,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="d-block text-center arrow-down">
-              <i className="fas fa-chevron-down fa-2x text-primary"></i>
-            </div>
           </div>
         </div>
       </header>
 
       <main>
-        <div className="course-section">
+        <div className="course-section" id="courses">
           <div className="course-section-title container">
             <div className="course-section-title">
               <h3 className="text-secondary">
@@ -100,7 +99,7 @@ export default function Home() {
         </div>
       </main>
 
-      <section className="about">
+      <section className="about" id="about">
         <div className="container">
           <div className="about-section">
             <div className="about-section-left">
@@ -156,7 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact text-secondary">
+      <section className="contact text-secondary" id="contact-us">
         <div className="container">
           <div className="contact-section">
             <h3 className="text-secondary text-center">Get In Touch</h3>
@@ -261,3 +260,9 @@ export default function Home() {
     </Fragment>
   );
 }
+
+const arrowDown = () => {
+  <div className="arrown-down">
+    <i className="fas fa-chevron-down fa-2x text-primary"></i>
+  </div>;
+};
