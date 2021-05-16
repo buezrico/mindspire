@@ -27,22 +27,22 @@ export default function Home() {
             </div>
           </div>
           <div className="inner">
-            <div className="row banner-boxes">
-              <div className="box col-sm mb-3">
+            <div className="banner-boxes">
+              <div className="box mb-3">
                 <i className="fas fa-tv  fa-2x mr-3"></i>
                 <div className="box-text">
                   <p>100 video courses</p>
                   <small>Enjoy a variety of engaging topics</small>
                 </div>
               </div>
-              <div className="box col-sm mb-3">
+              <div className="box mb-3">
                 <i className="fas fa-chalkboard-teacher fa-2x mr-3"></i>
                 <div className="box-text">
                   <p>Expert Instructor</p>
                   <small>Get the right Instructor</small>
                 </div>
               </div>
-              <div className="box col-sm mb-3">
+              <div className="box mb-3">
                 <i className="fas fa-calendar-check fa-2x mr-3"></i>
                 <div className="box-text">
                   <p>Lifetime access</p>
@@ -129,7 +129,9 @@ export default function Home() {
       <section className="trainer">
         <div className="container">
           <div className="trainer-section">
-            <h2 className="text-light mb-3 d-md-none">Meet your trainer</h2>
+            <h2 className="text-light mb-3 d-md-none text-center">
+              Meet your trainer
+            </h2>
             <div className="trainer-section-left">
               <h2 className="text-light mb-2 d-none d-md-block">
                 Meet your trainer
@@ -155,7 +157,7 @@ export default function Home() {
       <section className="contact text-secondary">
         <div className="container">
           <div className="contact-section">
-            <h3 className="text-secondary text-center">Contact Us</h3>
+            <h3 className="text-secondary text-center">Get In Touch</h3>
             <div className="contact-section-content">
               <div className="contact-section-content-left">
                 <div className="address contact-box">

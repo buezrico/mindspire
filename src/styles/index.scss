@@ -13,3 +13,14 @@ li {
 a {
   text-decoration: none;
 }
+
+.slick-next,
+.slick-prev {
+  width: unset;
+  top: 40%;
+}
+.slick-prev::before,
+.slick-next::before {
+  color: $secondary;
+  font-size: 2rem;
+}

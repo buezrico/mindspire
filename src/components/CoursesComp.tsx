@@ -5,15 +5,15 @@ import { Popover, Button } from "antd";
 class CoursesComp extends Component {
   constructor(props) {
     super(props);
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
+    // this.next = this.next.bind(this);
+    // this.previous = this.previous.bind(this);
   }
-  next() {
-    this.slider.slickNext();
-  }
-  previous() {
-    this.slider.slickPrev();
-  }
+  // next() {
+  //   this.slider.slickNext();
+  // }
+  // previous() {
+  //   this.slider.slickPrev();
+  // }
   render() {
     const settings = {
       className: "center",
@@ -22,7 +22,7 @@ class CoursesComp extends Component {
       // centerPadding: "5rem",
       slidesToShow: 4,
       speed: 500,
-      // arrows: true,
+      arrows: true,
       // dots: true,
       // nextArrow: <SampleNextArrow />,
       // prevArrow: <SamplePrevArrow />,
@@ -79,10 +79,10 @@ class CoursesComp extends Component {
     return (
       <div>
         <div className="courses">
-          <Slider ref={(c) => (this.slider = c)} {...settings}>
-            <Popover content={content} title="Title" placement="top">
-              <div className="course">
-                <img src="/images/course1.png" className="img-fluid" alt="" />
+          <Slider ref={(c) => (this.slider = Slider)} {...settings}>
+            <div className="course">
+              <img src="/images/course1.png" className="img-fluid" alt="" />
+              <div className="course-details mt-2">
                 <strong className="text-secondary mt-3 mb-0">
                   Teacher finishing school
                 </strong>
@@ -91,82 +91,74 @@ class CoursesComp extends Component {
                 <small>
                   <strong className="text-danger d-block">&#8358;10,000</strong>
                 </small>
-                {/* <button className="btn-primary border rounded text-light py-1 px-4">
+              </div>
+              {/* <button className="btn-primary border rounded text-light py-1 px-4">
                       Enroll Now
                     </button> */}
-              </div>
-            </Popover>
+            </div>
 
-            <Popover content={content} title="Title" placement="top">
-              <div className="course">
-                <img src="/images/course2.png" className="img-fluid" alt="" />
-                <strong className="text-secondary mt-3 mb-0">
-                  Social Polish
-                </strong>
-                <small className="d-block">Mrs Ken Nkwonta</small>
-                <small className="mb-2 mt-2">Rating</small>
-                <small>
-                  <strong className="text-danger d-block">&#8358;10,000</strong>
-                </small>
-                {/* <button className="btn-primary border rounded text-light py-1 px-4">
+            <div className="course">
+              <img src="/images/course2.png" className="img-fluid" alt="" />
+              <strong className="text-secondary mt-3 mb-0">
+                Social Polish
+              </strong>
+              <small className="d-block">Mrs Ken Nkwonta</small>
+              <small className="mb-2 mt-2">Rating</small>
+              <small>
+                <strong className="text-danger d-block">&#8358;10,000</strong>
+              </small>
+              {/* <button className="btn-primary border rounded text-light py-1 px-4">
                       Enroll Now
                     </button> */}
-              </div>
-            </Popover>
+            </div>
 
-            <Popover content={content} title="Title" placement="top">
-              <div className="course">
-                <img src="/images/course1.png" className="img-fluid" alt="" />
-                <strong className="text-secondary mt-3 mb-0">
-                  Teacher finishing school
-                </strong>
-                <small className="d-block">Mrs Ken Nkwonta</small>
-                <small className="mb-2 mt-2">Rating</small>
-                <small>
-                  <strong className="text-danger d-block">&#8358;10,000</strong>
-                </small>
-                {/* <button className="btn-primary border rounded text-light py-1 px-4">
+            <div className="course">
+              <img src="/images/course1.png" className="img-fluid" alt="" />
+              <strong className="text-secondary mt-3 mb-0">
+                Teacher finishing school
+              </strong>
+              <small className="d-block">Mrs Ken Nkwonta</small>
+              <small className="mb-2 mt-2">Rating</small>
+              <small>
+                <strong className="text-danger d-block">&#8358;10,000</strong>
+              </small>
+              {/* <button className="btn-primary border rounded text-light py-1 px-4">
                       Enroll Now
                     </button> */}
-              </div>
-            </Popover>
+            </div>
 
-            <Popover content={content} title="Title" placement="top">
-              <div className="course">
-                <img src="/images/course2.png" className="img-fluid" alt="" />
-                <strong className="text-secondary mt-3 mb-0">
-                  Social Polish
-                </strong>
-                <small className="d-block">Mrs Ken Nkwonta</small>
-                <small className="mb-2 mt-2">Rating</small>
-                <small>
-                  <strong className="text-danger d-block">&#8358;10,000</strong>
-                </small>
-                {/* <button className="btn-primary border rounded text-light py-1 px-4">
+            <div className="course">
+              <img src="/images/course2.png" className="img-fluid" alt="" />
+              <strong className="text-secondary mt-3 mb-0">
+                Social Polish
+              </strong>
+              <small className="d-block">Mrs Ken Nkwonta</small>
+              <small className="mb-2 mt-2">Rating</small>
+              <small>
+                <strong className="text-danger d-block">&#8358;10,000</strong>
+              </small>
+              {/* <button className="btn-primary border rounded text-light py-1 px-4">
                       Enroll Now
                     </button> */}
-              </div>
-            </Popover>
+            </div>
 
-            <Popover content={content} title="Title" placement="top">
-              <div className="course">
-                <img src="/images/course1.png" className="img-fluid" alt="" />
-                <strong className="text-secondary mt-3 mb-0">
-                  Teacher finishing school
-                </strong>
-                <small className="d-block">Mrs Ken Nkwonta</small>
-                <small className="mb-2 mt-2">Rating</small>
-                <small>
-                  <strong className="text-danger d-block">&#8358;10,000</strong>
-                </small>
-                {/* <button className="btn-primary border rounded text-light py-1 px-4">
+            <div className="course">
+              <img src="/images/course1.png" className="img-fluid" alt="" />
+              <strong className="text-secondary mt-3 mb-0">
+                Teacher finishing school
+              </strong>
+              <small className="d-block">Mrs Ken Nkwonta</small>
+              <small className="mb-2 mt-2">Rating</small>
+              <small>
+                <strong className="text-danger d-block">&#8358;10,000</strong>
+              </small>
+              {/* <button className="btn-primary border rounded text-light py-1 px-4">
                       Enroll Now
                     </button> */}
-              </div>
-            </Popover>
+            </div>
           </Slider>
 
-          <button
+          {/* <button
             className="btn rounded-circle prev arrows"
             onClick={this.previous}
           >
@@ -177,7 +169,7 @@ class CoursesComp extends Component {
             onClick={this.next}
           >
             <i className="fas fa-chevron-right"></i>
-          </button>
+          </button> */}
         </div>
       </div>
     );
