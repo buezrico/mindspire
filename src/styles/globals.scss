@@ -331,8 +331,23 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        .desc,
+        .btn-enroll {
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
+        }
+        &:hover {
+          .desc,
+          .btn-enroll {
+            @media screen and (min-width: 768px) {
+              display: flex;
+            }
+          }
+        }
         .course-details {
-          width: 15rem;
+          // width: 15rem;
+          padding: 0 0.5rem;
         }
       }
       .arrows {
@@ -362,6 +377,7 @@ header {
         img {
           width: 100%;
           max-width: 15rem;
+          max-height: 7rem;
         }
       }
     }

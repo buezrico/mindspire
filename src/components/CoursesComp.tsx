@@ -1,19 +1,10 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { Popover, Button } from "antd";
 
 class CoursesComp extends Component {
   constructor(props) {
     super(props);
-    // this.next = this.next.bind(this);
-    // this.previous = this.previous.bind(this);
   }
-  // next() {
-  //   this.slider.slickNext();
-  // }
-  // previous() {
-  //   this.slider.slickPrev();
-  // }
   render() {
     const settings = {
       className: "center",
@@ -66,13 +57,6 @@ class CoursesComp extends Component {
             Updated <strong>April 2021</strong>
           </span>
         </small>
-
-        <p>
-          Learn Python like a Professional Start from the basics and go all the
-          way to creating your own applications and games
-        </p>
-
-        <button className="btn-primary btn rounded w-100">Enroll Now</button>
       </div>
     );
 
@@ -80,96 +64,28 @@ class CoursesComp extends Component {
       <div>
         <div className="courses">
           <Slider ref={(c) => (this.slider = Slider)} {...settings}>
-            <div className="course">
-              <img src="/images/course1.png" className="img-fluid" alt="" />
-              <div className="course-details mt-2">
-                <strong className="text-secondary mt-3 mb-0">
-                  Teacher finishing school
-                </strong>
-                <small className="d-block">Mrs Ken Nkwonta</small>
-                <small className="mb-2 mt-2">Rating</small>
-                <small>
-                  <strong className="text-danger d-block">&#8358;10,000</strong>
-                </small>
+            {coursedata.map((course, i) => (
+              <div className="course" key={i}>
+                <img src={course.img} className="img-fluid" alt="" />
+                <div className="course-details mt-2">
+                  <strong className="text-secondary mt-3 mb-0">
+                    {course.title}
+                  </strong>
+
+                  <small className="d-block mb-2">{course.instructor}</small>
+                  <small className="desc">{course.desc}</small>
+                  <small>
+                    <strong className="text-danger d-block mt-2 mb-2">
+                      &#8358;{course.price}
+                    </strong>
+                  </small>
+                  <button className="btn-primary btn btn-enroll rounded text-center w-100">
+                    Enroll Now
+                  </button>
+                </div>
               </div>
-              {/* <button className="btn-primary border rounded text-light py-1 px-4">
-                      Enroll Now
-                    </button> */}
-            </div>
-
-            <div className="course">
-              <img src="/images/course2.png" className="img-fluid" alt="" />
-              <strong className="text-secondary mt-3 mb-0">
-                Social Polish
-              </strong>
-              <small className="d-block">Mrs Ken Nkwonta</small>
-              <small className="mb-2 mt-2">Rating</small>
-              <small>
-                <strong className="text-danger d-block">&#8358;10,000</strong>
-              </small>
-              {/* <button className="btn-primary border rounded text-light py-1 px-4">
-                      Enroll Now
-                    </button> */}
-            </div>
-
-            <div className="course">
-              <img src="/images/course1.png" className="img-fluid" alt="" />
-              <strong className="text-secondary mt-3 mb-0">
-                Teacher finishing school
-              </strong>
-              <small className="d-block">Mrs Ken Nkwonta</small>
-              <small className="mb-2 mt-2">Rating</small>
-              <small>
-                <strong className="text-danger d-block">&#8358;10,000</strong>
-              </small>
-              {/* <button className="btn-primary border rounded text-light py-1 px-4">
-                      Enroll Now
-                    </button> */}
-            </div>
-
-            <div className="course">
-              <img src="/images/course2.png" className="img-fluid" alt="" />
-              <strong className="text-secondary mt-3 mb-0">
-                Social Polish
-              </strong>
-              <small className="d-block">Mrs Ken Nkwonta</small>
-              <small className="mb-2 mt-2">Rating</small>
-              <small>
-                <strong className="text-danger d-block">&#8358;10,000</strong>
-              </small>
-              {/* <button className="btn-primary border rounded text-light py-1 px-4">
-                      Enroll Now
-                    </button> */}
-            </div>
-
-            <div className="course">
-              <img src="/images/course1.png" className="img-fluid" alt="" />
-              <strong className="text-secondary mt-3 mb-0">
-                Teacher finishing school
-              </strong>
-              <small className="d-block">Mrs Ken Nkwonta</small>
-              <small className="mb-2 mt-2">Rating</small>
-              <small>
-                <strong className="text-danger d-block">&#8358;10,000</strong>
-              </small>
-              {/* <button className="btn-primary border rounded text-light py-1 px-4">
-                      Enroll Now
-                    </button> */}
-            </div>
+            ))}
           </Slider>
-
-          {/* <button
-            className="btn rounded-circle prev arrows"
-            onClick={this.previous}
-          >
-            <i className="fas fa-chevron-left p-1"></i>
-          </button>
-          <button
-            className="btn rounded-circle next arrows"
-            onClick={this.next}
-          >
-            <i className="fas fa-chevron-right"></i>
-          </button> */}
         </div>
       </div>
     );
@@ -177,3 +93,41 @@ class CoursesComp extends Component {
 }
 
 export default CoursesComp;
+
+const coursedata = [
+  {
+    title: "Teacher Finishing School",
+    img: "/images/course1.png",
+    instructor: "Mrs Ken Nkwonta",
+    price: "10,000",
+    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque accusantium tempore similique voluptates harum, officiis soluta voluptatibus! Soluta odit, animi quas ",
+  },
+  {
+    title: "Social Polish",
+    img: "/images/course2.png",
+    instructor: "Mrs Ken Nkwonta",
+    price: "10,000",
+    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque accusantium tempore similique voluptates harum, officiis soluta voluptatibus! Soluta odit, animi quas ",
+  },
+  {
+    title: "Career Path",
+    img: "/images/course3.png",
+    instructor: "Mrs Ken Nkwonta",
+    price: "10,000",
+    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque accusantium tempore similique voluptates harum, officiis soluta voluptatibus! Soluta odit, animi quas ",
+  },
+  {
+    title: "Teachers Guide",
+    img: "/images/course4.png",
+    instructor: "Mrs Ken Nkwonta",
+    price: "10,000",
+    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque accusantium tempore similique voluptates harum, officiis soluta voluptatibus! Soluta odit, animi quas ",
+  },
+  {
+    title: "Get It Right",
+    img: "/images/course5.png",
+    instructor: "Mrs Ken Nkwonta",
+    price: "10,000",
+    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque accusantium tempore similique voluptates harum, officiis soluta voluptatibus! Soluta odit, animi quas ",
+  },
+];

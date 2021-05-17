@@ -6,6 +6,7 @@ import SocialIconsComp from "../components/SocialIconsComp";
 
 import { Anchor } from "antd";
 import WhatsappWidget from "react-whatsapp-widget";
+import FormComp from "../components/FormComp";
 
 export default function Home() {
   const { Link } = Anchor;
@@ -185,43 +186,7 @@ export default function Home() {
               </div>
               <div className="contact-section-content-right">
                 <h5 className="mb-3">Leave a message</h5>
-                <form>
-                  <div className="form row">
-                    <div className="form-group col-12 mb-3">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Name"
-                      />
-                    </div>
-                    <div className="form-group col-12 mb-3">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Phone"
-                      />
-                    </div>
-                    <div className="form-group col-12 mb-3">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Email"
-                      />
-                    </div>
-                    <div className="form-group col-12 mb-3">
-                      <textarea
-                        rows="5"
-                        className="form-control"
-                        placeholder="Message"
-                      />
-                    </div>
-                    <div className="form-group col-12">
-                      <button className="btn btn-secondary btn-lg col-12">
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                <FormComp />
               </div>
             </div>
           </div>
