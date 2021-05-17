@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Slider from "react-slick";
 
 class CoursesComp extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     const settings = {
       className: "center",

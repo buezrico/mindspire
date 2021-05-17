@@ -1,15 +1,21 @@
 import Head from "next/head";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import CoursesComp from "../components/CoursesComp";
 import Navbar from "../components/NavbarComp";
 import SocialIconsComp from "../components/SocialIconsComp";
-
-import { Anchor } from "antd";
-import WhatsappWidget from "react-whatsapp-widget";
 import FormComp from "../components/FormComp";
+
+import { Anchor, Modal } from "antd";
+import WhatsappWidget from "react-whatsapp-widget";
 
 export default function Home() {
   const { Link } = Anchor;
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
   return (
     <Fragment>
       <Head>
@@ -98,6 +104,9 @@ export default function Home() {
             <CoursesComp />
           </div>
         </div>
+        <Modal visible={isModalVisible}>
+          <FormComp />
+        </Modal>
       </main>
 
       <section className="about" id="about">
