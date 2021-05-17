@@ -2,8 +2,11 @@ import React, { Component, useState } from "react";
 import Slider from "react-slick";
 
 class CoursesComp extends Component {
+  slider: any;
+
   constructor(props) {
     super(props);
+    this.slider = React.createRef();
   }
 
   render() {
@@ -46,25 +49,10 @@ class CoursesComp extends Component {
       ],
     };
 
-    // const content = (
-    //   <div className="popover">
-    //     <h6>
-    //       <strong>Teacher Finishing School</strong>
-    //     </h6>
-    //     <small className="d-block mb-2 text-info">Mrs Ken Nkwonta</small>
-    //     <small className="d-block">
-    //       3 months - All Levels{" "}
-    //       <span className="text-success">
-    //         Updated <strong>April 2021</strong>
-    //       </span>
-    //     </small>
-    //   </div>
-    // );
-
     return (
       <div>
         <div className="courses">
-          <Slider ref={(c) => (this.slider = Slider)} {...settings}>
+          <Slider ref={this.slider} {...settings}>
             {coursedata.map((course, i) => (
               <div className="course" key={i}>
                 <img src={course.img} className="img-fluid" alt="" />
