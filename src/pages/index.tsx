@@ -80,7 +80,7 @@ export default function Home() {
           </div>
           <div className="container course-section-content">
             <div className="course-section-content-title d-none d-md-flex">
-              <div className="course-section-content-title-text">
+              <div className="course-section-content-title-text mb-5">
                 <h4 className="">
                   Expand your career opportunities with Social Polish
                 </h4>
@@ -91,9 +91,9 @@ export default function Home() {
                   simple syntax is especially suited for desktop, web, and
                   business
                 </p>
-                <button className="btn-outline-secondary btn mb-5">
+                {/* <button className="btn-outline-secondary btn mb-5">
                   Explore
-                </button>
+                </button> */}
               </div>
 
               <div className="course-section-content-title-picture">
@@ -131,13 +131,25 @@ export default function Home() {
                 eius to mod tempors incididunt ut labore et dolore magna this
                 aliqua enims ad minim.
               </p>
-              <button className="btn btn-outline-primary ">Read More</button>
+              <h5 className="text-primary">Our Vision</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisic ing elit, sed
+                eius to mod tempors incididunt ut labore et dolore magna this
+                aliqua enims ad minim.
+              </p>
+              <h5 className="text-primary">Our Mission</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisic ing elit, sed
+                eius to mod tempors incididunt ut labore et dolore magna this
+                aliqua enims ad minim.
+              </p>
+              {/* <button className="btn btn-outline-primary ">Read More</button> */}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="trainer">
+      <section className="trainer" id="trainer">
         <div className="container">
           <div className="trainer-section">
             <h2 className="text-light mb-3 d-md-none text-center">

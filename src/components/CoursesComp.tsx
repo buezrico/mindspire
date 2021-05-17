@@ -46,20 +46,20 @@ class CoursesComp extends Component {
       ],
     };
 
-    const content = (
-      <div className="popover">
-        <h6>
-          <strong>Teacher Finishing School</strong>
-        </h6>
-        <small className="d-block mb-2 text-info">Mrs Ken Nkwonta</small>
-        <small className="d-block">
-          3 months - All Levels{" "}
-          <span className="text-success">
-            Updated <strong>April 2021</strong>
-          </span>
-        </small>
-      </div>
-    );
+    // const content = (
+    //   <div className="popover">
+    //     <h6>
+    //       <strong>Teacher Finishing School</strong>
+    //     </h6>
+    //     <small className="d-block mb-2 text-info">Mrs Ken Nkwonta</small>
+    //     <small className="d-block">
+    //       3 months - All Levels{" "}
+    //       <span className="text-success">
+    //         Updated <strong>April 2021</strong>
+    //       </span>
+    //     </small>
+    //   </div>
+    // );
 
     return (
       <div>
@@ -74,7 +74,7 @@ class CoursesComp extends Component {
                   </strong>
 
                   <small className="d-block mb-2">{course.instructor}</small>
-                  <small className="desc">{course.desc}</small>
+                  <small className="desc text-justify">{course.desc}</small>
                   <small>
                     <strong className="text-danger d-block mt-2 mb-2">
                       &#8358;{course.price}
