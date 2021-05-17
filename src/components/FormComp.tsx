@@ -15,7 +15,11 @@ const FormComp = () => {
             <input type="text" className="form-control" placeholder="Email" />
           </div>
           <div className="form-group col-12 mb-3">
-            <textarea rows="5" className="form-control" placeholder="Message" />
+            <textarea
+              rows={Number[5]}
+              className="form-control"
+              placeholder="Message"
+            />
           </div>
           <div className="form-group col-12">
             <button className="btn btn-secondary btn-lg col-12">Submit</button>
