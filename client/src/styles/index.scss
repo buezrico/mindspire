@@ -1,0 +1,60 @@
+@import "./variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@import "~antd/dist/antd.css";
+@import "react-whatsapp-widget/dist/index.css";
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.slick-next,
+.slick-prev {
+  width: unset;
+  top: 40%;
+}
+.slick-prev::before,
+.slick-next::before {
+  color: $secondary;
+  font-size: 2rem;
+}
+
+._1bpcM {
+  position: fixed;
+  width: unset;
+  height: unset;
+  padding: 0.5rem;
+  background: green;
+  svg {
+    color: white;
+  }
+}
+._2iWL7 {
+  margin: 1rem;
+  margin-bottom: 0;
+  position: fixed;
+  @media screen and (max-width: 768px) {
+    width: unset;
+  }
+  // right: unset;
+}
+
+.ant-anchor-ink {
+  display: none;
+}
+.ant-anchor-link-title {
+  color: $light;
+  @media screen and (max-width: 768px) {
+    color: $secondary;
+  }
+}
+.ant-anchor-link-title-active {
+  color: $primary !important;
+}
