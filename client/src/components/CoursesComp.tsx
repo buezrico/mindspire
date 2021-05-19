@@ -1,6 +1,8 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import Slider from "react-slick";
 import products from "../products.json";
+import { fromImageToUrl } from "../utils/urls";
+import Link from "next/link";
 
 class CoursesComp extends Component {
   slider: any;
@@ -55,27 +57,37 @@ class CoursesComp extends Component {
         <div className="courses">
           <Slider ref={this.slider} {...settings}>
             {products.map((product) => (
-              <div className="course" key={product.name}>
-                <img src={product.image} className="img-fluid" alt="" />
-                <div className="course-details mt-2">
-                  <strong className="text-secondary mt-3 mb-0">
-                    {product.name}
-                  </strong>
+              <Link href={`/products/${product.slug}`}>
+                <a>
+                  <div className="course" key={product.name}>
+                    <img
+                      src={fromImageToUrl(product.image)}
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <div className="course-details mt-2">
+                      <strong className="text-secondary mt-3 mb-0">
+                        {product.name}
+                      </strong>
 
-                  <small className="d-block mb-2">{product.meta_title}</small>
-                  <small className="desc text-justify">
-                    {product.meta_description}
-                  </small>
-                  <small>
-                    <strong className="text-danger d-block mt-2 mb-2">
-                      &#8358;{product.price}
-                    </strong>
-                  </small>
-                  <button className="btn-primary btn btn-enroll rounded text-center w-100">
-                    Enroll Now
-                  </button>
-                </div>
-              </div>
+                      <small className="d-block mb-2">
+                        {product.meta_title}
+                      </small>
+                      <small className="desc text-justify">
+                        {product.meta_description}
+                      </small>
+                      <small>
+                        <strong className="text-danger d-block mt-2 mb-2">
+                          &#8358;{product.price}
+                        </strong>
+                      </small>
+                      <button className="btn-primary btn btn-enroll rounded text-center w-100">
+                        Enroll Now
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </Link>
             ))}
           </Slider>
         </div>
