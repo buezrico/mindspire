@@ -6,6 +6,7 @@ import Link from "next/link";
 
 class CoursesComp extends Component {
   slider: any;
+  products: any;
 
   constructor(props) {
     super(props);
@@ -56,7 +57,7 @@ class CoursesComp extends Component {
       <div>
         <div className="courses">
           <Slider ref={this.slider} {...settings}>
-            {products.map((product) => (
+            {this.products.map((product) => (
               <Link href={`/products/${product.slug}`}>
                 <a>
                   <div className="course" key={product.name}>
@@ -97,3 +98,13 @@ class CoursesComp extends Component {
 }
 
 export default CoursesComp;
+export async function getStaticProps() {
+  const product_res = await fetch(`${API_URL}/products/`);
+  const products = product_res.json();
+
+  return {
+    props: {
+      products,
+    },
+  };
+}
