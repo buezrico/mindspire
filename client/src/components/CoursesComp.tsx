@@ -1,7 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import products from "../products.json";
-import { fromImageToUrl } from "../utils/urls";
+// import products from "../products.json";
+// import { products } from "../products";
+// import { fromImageToUrl } from "../utils/urls";
 import Link from "next/link";
 
 const CoursesComp = () => {
@@ -58,11 +59,7 @@ const CoursesComp = () => {
             <Link href={`/products/${product.slug}`}>
               <a>
                 <div className="course" key={product.name}>
-                  <img
-                    src={fromImageToUrl(product.image)}
-                    className="img-fluid"
-                    alt=""
-                  />
+                  <img src={product.image} className="img-fluid" alt="" />
                   <div className="course-details mt-2">
                     <strong className="text-secondary mt-3 mb-0">
                       {product.name}
@@ -92,13 +89,76 @@ const CoursesComp = () => {
 };
 
 export default CoursesComp;
+
 // export async function getStaticProps() {
 //   const product_res = await fetch(`${API_URL}/products/`);
 //   const products = product_res.json();
 
-//   // return {
-//   //   props: {
-//   //     products,
-//   //   },
-//   // };
+//   return {
+//     props: {
+//       products,
+//     },
+//   };
 // }
+
+const products = [
+  {
+    id: 1,
+    name: "Get It Right",
+    content:
+      "Get it right course available on mindspire. Learn how to get things right.",
+    meta_description: "Get it right course for old teachers",
+    meta_title: "get it right course I",
+    price: 49.99,
+    slug: "get-it-right",
+    image: "/images/course1.png",
+  },
+
+  {
+    id: 2,
+    name: "Get It Right",
+    content:
+      "Get it right course available on mindspire. Learn how to get things right.",
+    meta_description: "Get it right course for old teachers",
+    meta_title: "get it right course I",
+    price: 49.99,
+    slug: "get-it-right",
+    image: "/images/course1.png",
+  },
+
+  {
+    id: 3,
+    name: "Get It Right",
+    content:
+      "Get it right course available on mindspire. Learn how to get things right.",
+    meta_description: "Get it right course for old teachers",
+    meta_title: "get it right course I",
+    price: 49.99,
+    slug: "get-it-right",
+    image: "/images/course1.png",
+  },
+
+  {
+    id: 4,
+    name: "Get It Right",
+    content:
+      "Get it right course available on mindspire. Learn how to get things right.",
+    meta_description: "Get it right course for old teachers",
+    meta_title: "get it right course I",
+    price: 49.99,
+    slug: "get-it-right",
+    image: "/images/course1.png",
+  },
+
+  {
+    id: 5,
+    name: "Get It Right",
+    content:
+      "Get it right course available on mindspire. Learn how to get things right.",
+    meta_description: "Get it right course for old teachers",
+    meta_title: "get it right course I",
+    price: 49.99,
+    slug: "get-it-right",
+    image: "/images/course1.png",
+  },
+];
