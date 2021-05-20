@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import products from "../products.json";
 import { fromImageToUrl } from "../utils/urls";
 import Link from "next/link";
 
-const CoursesComp = (products) => {
+const CoursesComp = () => {
   // slider: any;
   // products: any;
 
@@ -14,7 +14,7 @@ const CoursesComp = (products) => {
   // }
 
   // render() {
-  const settings = {
+  const settings: any = {
     className: "center",
     // centerMode: true,
     infinite: true,
