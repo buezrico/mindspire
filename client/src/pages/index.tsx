@@ -246,9 +246,3 @@ export default function Home() {
     </Fragment>
   );
 }
-
-const arrowDown = () => {
-  <div className="arrown-down">
-    <i className="fas fa-chevron-down fa-2x text-primary"></i>
-  </div>;
-};
