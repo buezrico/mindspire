@@ -1,8 +1,16 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import courses from "../../courses.json";
+
 // import { fromImageToUrl } from "../../utils/urls";
 // const course = courses[0];
+const course = courses;
+  paths: courses.map((course) => ({
+    params: {
+      slug: String(course.slug),
+    },
+  })),
+};
 
 const Course = () => {
   return (
@@ -36,14 +44,14 @@ const Course = () => {
 
 export default Course;
 
-export async function getStaticPaths() {
-  // const course = await courses
-  return {
-    paths: courses.map((course) => ({
-      params: {
-        slug: String(course.slug),
-      },
-    })),
-    fallback: false,
-  };
-}
+// export async function getStaticPaths() {
+//   const course = await courses;
+//   return {
+//     paths: courses.map((course) => ({
+//       params: {
+//         slug: String(course.slug),
+//       },
+//     })),
+//     fallback: false,
+//   };
+// }
